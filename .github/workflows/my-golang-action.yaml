@@ -1,0 +1,25 @@
+name: My Golang Action
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Go
+      uses: actions/setup-go@v2
+      with:
+        go-version: 1.20 # You can specify a specific version if you want
+
+    - name: Build and run the Golang Action
+      run: |
+        go build -o my-golang-action
+        ./my-golang-action
+
