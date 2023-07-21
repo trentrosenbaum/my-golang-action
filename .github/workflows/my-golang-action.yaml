@@ -20,6 +20,6 @@ jobs:
 
     - name: Build and run the Golang Action
       run: |
-        qmake build
+        make build
         ./my-golang-action
 
