@@ -30,7 +30,7 @@ jobs:
 
       - name: Assert the output
         run: |
-          expected="Hello from my Golang GitHub Action!"
+          expected="Output: Hello from my Golang GitHub Action!"
           output=$(cat output.txt)
           if [ "$output" != "$expected" ]; then
             echo "Assertion failed. Expected: $expected, Got: $output"
